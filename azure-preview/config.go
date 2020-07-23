@@ -71,6 +71,10 @@ func (c *Config) getToken() (*adal.Token, error) {
 			c.TenantID,
 			nil,
 		)
+		if err != nil {
+			return nil, err
+		}
+
 		spToken, err := adal.NewServicePrincipalToken(
 			*oauthConfig,
 			c.ClientID,
