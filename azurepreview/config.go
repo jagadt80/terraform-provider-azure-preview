@@ -3,6 +3,7 @@ package azurepreview
 import (
 	"context"
 
+	"github.com/Azure/azure-sdk-for-go/services/consumption/mgmt/2019-01-01/consumption"
 	"github.com/Azure/azure-sdk-for-go/services/preview/subscription/mgmt/2019-10-01-preview/subscription"
 	"github.com/Azure/azure-sdk-for-go/services/resources/mgmt/2019-11-01/subscriptions"
 	"github.com/Azure/go-autorest/autorest"
@@ -21,6 +22,7 @@ type Config struct {
 }
 
 type Meta struct {
+	Budgets       consumption.BudgetsClient
 	Subscription  subscription.Client
 	Subscriptions subscriptions.Client
 	StopContext   context.Context
@@ -35,6 +37,9 @@ func (c *Config) Client(userAgent string) (*Meta, diag.Diagnostics) {
 	if err != nil {
 		return nil, diag.FromErr(err)
 	}
+
+	meta.Budgets = consumption.NewBudgetsClient(c.SubscriptionID)
+	configureClient(&meta.Budgets.Client, userAgent, authorizer)
 
 	meta.Subscription = subscription.NewClient()
 	configureClient(&meta.Subscription.Client, userAgent, authorizer)

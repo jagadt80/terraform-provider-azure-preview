@@ -28,17 +28,9 @@ func TestProvider_impl(t *testing.T) {
 }
 
 func testAccPreCheck(t *testing.T) {
-	/*if err := os.Getenv("AZURE_CLIENT_ID"); err == "" {
-		t.Fatal("AZURE_CLIENT_ID must be set for acceptance tests")
+	if err := os.Getenv("AZURE_SUBSCRIPTION_ID"); err == "" {
+		t.Fatal("AZURE_SUBSCRIPTION_ID must be set for acceptance tests")
 	}
-
-	if err := os.Getenv("AZURE_CLIENT_SECRET"); err == "" {
-		t.Fatal("AZURE_CLIENT_ID must be set for acceptance tests")
-	}
-
-	if err := os.Getenv("AZURE_TENANT_ID"); err == "" {
-		t.Fatal("AZURE_TENANT_ID must be set for acceptance tests")
-	}*/
 
 	if err := os.Getenv("AZURE_TEST_ENROLLMENT_ACCOUNT"); err == "" {
 		t.Fatal("AZURE_TEST_ENROLLMENT_ACCOUNT must be set for acceptance tests")

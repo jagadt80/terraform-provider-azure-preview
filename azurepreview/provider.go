@@ -55,6 +55,7 @@ func Provider() *schema.Provider {
 
 		ResourcesMap: map[string]*schema.Resource{
 			"azurepreview_subscription": resourceAzurePreviewSubscription(),
+			"azurepreview_budget":       resourceAzurePreviewBudget(),
 		},
 	}
 
