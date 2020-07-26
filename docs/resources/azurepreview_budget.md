@@ -34,7 +34,7 @@ The following arguments are supported:
 
 * `name` - (Required) The name of the budget.
 
-* `scope` - (Required) The scope of the budget. This includes `subscriptions/{subscriptionId}` for subscription scope, `subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}` for Resource Group scope, `providers/Microsoft.Billing/billingAccounts/{billingAccountId}` for Billing Account scope, `providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}` for Department scope, `providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}` for Enrollment Account scope, `providers/Microsoft.Management/managementGroups/{managementGroupId}` for Management Group scope.
+* `scope` - (Required) The scope of the budget. This includes `subscriptions/{subscriptionId}` for subscription scope, `subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}` for Resource Group scope, `providers/Microsoft.Billing/enrollmentAccounts/{enrollmentAccountId}` for Enrollment Account scope, `providers/Microsoft.Management/managementGroups/{managementGroupId}` for Management Group scope.
 
 * `category` - (Required) The category of the budget, whether the budget tracks cost or usage. Possible values are: `Cost` and `Usage`.
 

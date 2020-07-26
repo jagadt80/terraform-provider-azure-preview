@@ -20,7 +20,7 @@ func TestAccAzurePreviewBudget_basic(t *testing.T) {
 		CheckDestroy: testAccCheckAzurePreviewBudgetDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccCheckAzurePreviewBudgetConfigBasic(scope, name),
+				Config: testAccCheckAzurePreviewBudgetConfigBasic(scope, name, acctest.RandString(6)),
 				Check: resource.ComposeTestCheckFunc(
 					testAccCheckAzurePreviewBudgetExists("azurepreview_budget.test"),
 				),
@@ -87,7 +87,7 @@ func testAccCheckAzurePreviewBudgetExists(n string) resource.TestCheckFunc {
 	}
 }
 
-func testAccCheckAzurePreviewBudgetConfigBasic(scope, name string) string {
+func testAccCheckAzurePreviewBudgetConfigBasic(scope, name, random string) string {
 	return fmt.Sprintf(`
 resource "azurepreview_budget" "test" {
   scope      = "%s"
@@ -103,6 +103,12 @@ resource "azurepreview_budget" "test" {
 
   filters {
     resources = ["%s"]
+    tag {
+      name = "%s"
+      values = [
+        "%s"
+      ]
+    }
   }
 
   notification {
@@ -114,5 +120,5 @@ resource "azurepreview_budget" "test" {
     ]
   }
 }
-`, scope, name, name, name)
+`, scope, name, random, random, random, random)
 }

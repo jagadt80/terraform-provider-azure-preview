@@ -17,6 +17,16 @@ func expandStringSlice(input []interface{}) *[]string {
 	return &result
 }
 
+func flattenStringSlice(input *[]string) []interface{} {
+	result := make([]interface{}, 0)
+	if input != nil {
+		for _, item := range *input {
+			result = append(result, item)
+		}
+	}
+	return result
+}
+
 func parseSubscriptionID(input string) (string, error) {
 	parts := strings.Split(input, "/")
 	if len(parts) != 3 {
