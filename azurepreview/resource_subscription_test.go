@@ -10,7 +10,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 )
 
-func TestAccAzurePreviewSubscriptionBasic(t *testing.T) {
+func TestAccAzurePreviewSubscription_basic(t *testing.T) {
 	name := fmt.Sprintf("testacc-%s", acctest.RandString(6))
 	enrollmentAccount := os.Getenv("AZURE_TEST_ENROLLMENT_ACCOUNT")
 	offerType := "MS-AZR-0017P"

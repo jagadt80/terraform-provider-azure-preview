@@ -4,7 +4,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 
-	"github.com/innovationnorway/terraform-provider-azure-preview/azure-preview"
+	"github.com/innovationnorway/terraform-provider-azure-preview/azurepreview"
 )
 
 func main() {
