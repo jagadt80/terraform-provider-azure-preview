@@ -192,9 +192,12 @@ github.com/hashicorp/terraform-plugin-sdk/v2 v2.0.0-rc.2 h1:HHppQ5ly03DFdZpuxiO2
 github.com/hashicorp/terraform-plugin-sdk/v2 v2.0.0-rc.2/go.mod h1:EmGbJlJ/WPDVvHZKZKSPb6jBiQ5ZFuLksxBXweufgjk=
 github.com/hashicorp/terraform-plugin-sdk/v2 v2.0.0 h1:jPPqctLDg75CilV3IpypAz6on3MSMOiUMzXNz+Xex6E=
 github.com/hashicorp/terraform-plugin-sdk/v2 v2.0.0/go.mod h1:xOf85UtHJ0/9/EF3eKgZFlJ6feN8sDtjQRWRHhimCUw=
+github.com/hashicorp/terraform-plugin-sdk/v2 v2.0.1 h1:qG6EdnW2UrftQI4mBdIsWP4YWqYJXynZtl0shQYuU78=
+github.com/hashicorp/terraform-plugin-sdk/v2 v2.0.1/go.mod h1:BRz6UtYmksQJU0eMfahQR8fcJf8tIe77gn7YVm6rGD4=
 github.com/hashicorp/terraform-plugin-test v1.4.0 h1:9/eoY48ZGgcjkSkxIvUD7MGopFYeSv/2wmS09wSZg2I=
 github.com/hashicorp/terraform-plugin-test v1.4.0/go.mod h1:QIJHYz8j+xJtdtLrFTlzQVC0ocr3rf/OjIpgZLK56Hs=
 github.com/hashicorp/terraform-plugin-test/v2 v2.0.0-20200724200815-faa9931ac59e/go.mod h1:C6VALgUlvaif+PnHyRGKWPTdQkMJK4NQ20VJolxZLI0=
+github.com/hashicorp/terraform-plugin-test/v2 v2.0.0/go.mod h1:C6VALgUlvaif+PnHyRGKWPTdQkMJK4NQ20VJolxZLI0=
 github.com/hashicorp/yamux v0.0.0-20180604194846-3520598351bb/go.mod h1:+NfK9FKeTrX5uv1uIXGdwYDTeHna2qgaIlx54MXqjAM=
 github.com/hashicorp/yamux v0.0.0-20181012175058-2f1d1f20f75d h1:kJCB4vdITiW1eC1vq2e6IsrXKrZit1bv/TDYFGMp4BQ=
 github.com/hashicorp/yamux v0.0.0-20181012175058-2f1d1f20f75d/go.mod h1:+NfK9FKeTrX5uv1uIXGdwYDTeHna2qgaIlx54MXqjAM=
