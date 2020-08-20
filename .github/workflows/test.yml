@@ -9,14 +9,14 @@ on:
 jobs:
   golangci-lint:
     runs-on: ubuntu-latest
-    container: golangci/golangci-lint:v1.24
+    container: golangci/golangci-lint
     steps:
     - uses: actions/checkout@v2
     - run: golangci-lint run ./...
 
   tfproviderlint:
     runs-on: ubuntu-latest
-    container: bflad/tfproviderlint:0.14
+    container: bflad/tfproviderlint
     steps:
     - uses: actions/checkout@v2
     - run: tfproviderlint ./...
