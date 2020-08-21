@@ -10,12 +10,13 @@
 ## Usage
 
 ```hcl
-provider "azurepreview" {}
+provider "azure-preview" {}
 
 resource "azurepreview_subscription" "example" {
   name               = "example"
   enrollment_account = "6d38255d-8321-4f17-8ddd-3bd94c57d988"
   offer_type         = "MS-AZR-0148P"
+  provider           = azure-preview
 }
 ```
 
