@@ -51,7 +51,9 @@ func Provider() *schema.Provider {
 			},
 		},
 
-		DataSourcesMap: map[string]*schema.Resource{},
+		DataSourcesMap: map[string]*schema.Resource{
+			"azurepreview_resources": dataSourceAzurePreviewResources(),
+		},
 
 		ResourcesMap: map[string]*schema.Resource{
 			"azurepreview_subscription": resourceAzurePreviewSubscription(),
