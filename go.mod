@@ -3,7 +3,7 @@ module github.com/innovationnorway/terraform-provider-azure-preview
 go 1.14
 
 require (
-	github.com/Azure/azure-sdk-for-go v48.0.0+incompatible
+	github.com/Azure/azure-sdk-for-go v48.2.2+incompatible
 	github.com/Azure/go-autorest/autorest v0.11.11
 	github.com/Azure/go-autorest/autorest/adal v0.9.5
 	github.com/Azure/go-autorest/autorest/azure/cli v0.4.2
