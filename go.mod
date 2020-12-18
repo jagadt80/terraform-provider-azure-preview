@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/Azure/azure-sdk-for-go v48.0.0+incompatible
-	github.com/Azure/go-autorest/autorest v0.11.11
+	github.com/Azure/go-autorest/autorest v0.11.15
 	github.com/Azure/go-autorest/autorest/adal v0.9.5
 	github.com/Azure/go-autorest/autorest/azure/cli v0.4.2
 	github.com/Azure/go-autorest/autorest/date v0.3.0
