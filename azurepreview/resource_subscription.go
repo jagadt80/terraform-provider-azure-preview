@@ -21,7 +21,7 @@ func resourceAzurePreviewSubscription() *schema.Resource {
 				Type:             schema.TypeString,
 				Optional:         true,
 				Computed:         true,
-				ValidateDiagFunc: stringLengthBetween(1, 24),
+				ValidateDiagFunc: stringLengthBetween(1, 60),
 			},
 
 			"enrollment_account": {
