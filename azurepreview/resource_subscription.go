@@ -148,12 +148,17 @@ func resourceAzurePreviewSubscriptionUpdate(ctx context.Context, d *schema.Resou
 
 	client := meta.(*Meta).Subscription
 
+	subscriptionID, err := parseSubscriptionID(d.Id())
+	if err != nil {
+		return diag.FromErr(err)
+	}
+
 	subscriptionName := subscription.Name{
 		SubscriptionName: to.StringPtr(d.Get("name").(string)),
 	}
 
 	if d.HasChange("name") {
-		_, err := client.Rename(ctx, d.Id(), subscriptionName)
+		_, err := client.Rename(ctx, subscriptionID, subscriptionName)
 		if err != nil {
 			return diag.FromErr(err)
 		}
